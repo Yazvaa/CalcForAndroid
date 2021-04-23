@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">CalcForAndroid</string>
+    <string name="app_name">Калькулятор</string>
+    <string name="keyZero">0</string>
+    <string name="keyOne">1</string>
+    <string name="keyTwo">2</string>
+    <string name="keyThree">3</string>
+    <string name="keyFour">4</string>
+    <string name="keyFive">5</string>
+    <string name="keySix">6</string>
+    <string name="keySeven">7</string>
+    <string name="keyEight">8</string>
+    <string name="keyNine">9</string>
+    <string name="keyClear">C</string>
+    <string name="keyBackSpace"></string>
+    <string name="keyPercent">%</string>
+    <string name="keyDiv">÷</string>
+    <string name="keyMulti">×</string>
+    <string name="keyInc">+</string>
+    <string name="keyDec">-</string>
+    <string name="keyEq">=</string>
+    <string name="keyCopy"></string>
+    <string name="keyLim">.</string>
 </resources>
