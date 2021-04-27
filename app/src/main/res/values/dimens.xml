@@ -3,4 +3,5 @@
     <dimen name="horFontSize">28dp</dimen>
     <dimen name="vertFontSize">42dp</dimen>
     <dimen name="horResultFontSize">42dp</dimen>
+    <dimen name="layout_marginRight">12dp</dimen>
 </resources>

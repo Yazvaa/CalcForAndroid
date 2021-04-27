@@ -14,17 +14,27 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/etUserInput"
+<!--        <EditText-->
+<!--            android:id="@+id/etUserInput"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="308dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:enabled="false"-->
+<!--            android:gravity="end|bottom"-->
+<!--            android:inputType="textMultiLine"-->
+<!--            android:lines="7"-->
+<!--            android:text="@string/keyZero"-->
+<!--            android:textSize="@dimen/vertFontSize" />-->
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="308dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etUserInput"
             android:layout_marginTop="10dp"
-            android:enabled="false"
             android:gravity="end|bottom"
-            android:inputType="textMultiLine"
             android:lines="7"
+            android:inputType="textMultiLine"
             android:text="@string/keyZero"
-            android:textSize="@dimen/vertFontSize" />
+            android:textSize="@dimen/vertFontSize"/>
 
         <GridLayout
             android:layout_width="wrap_content"
@@ -35,7 +45,7 @@
 
             <Button
                 android:id="@+id/btnClear"
-                android:layout_marginRight="12dp"
+                android:layout_marginRight="@dimen/layout_marginRight"
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="clear"
                 android:text="@string/keyClear"
@@ -43,7 +53,7 @@
 
             <Button
                 android:id="@+id/btnBackSpace"
-                android:layout_marginRight="12dp"
+                android:layout_marginRight="@dimen/layout_marginRight"
                 android:backgroundTint="@color/buttonBackground"
                 android:drawableLeft="@drawable/backspace"
                 android:tag="back"
@@ -52,7 +62,7 @@
 
             <Button
                 android:id="@+id/btnPercent"
-                android:layout_marginRight="12dp"
+                android:layout_marginRight="@dimen/layout_marginRight"
                 android:backgroundTint="@color/buttonBackground"
                 android:text="@string/keyPercent"
                 android:tag="perc"
@@ -161,7 +171,7 @@
             <Button
                 android:id="@+id/btnNumZerro"
                 android:backgroundTint="@color/buttonBackground"
-                android:tag="num"
+                android:tag="0"
                 android:text="@string/keyZero"
                 android:textSize="@dimen/vertFontSize" />
 
