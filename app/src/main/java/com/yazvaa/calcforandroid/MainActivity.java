@@ -7,12 +7,14 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private static final String TAG = "CALC_FOR_ANDROID";
     TypeKey lastKey;
     TextView ResultOutPut;
     Calculator calculator = new Calculator();
@@ -76,11 +78,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button = (Button) v;
         if (button.getTag() != null) {
             switch (button.getTag().toString()) {
-//                case "num": {
-//                    calculator.appendValueString(button.getText().toString());
-//                    lastKey = TypeKey.Num;
-//                    break;
-//                }
                 case "back": {
                     calculator.backspace();
                     lastKey = TypeKey.Managed;

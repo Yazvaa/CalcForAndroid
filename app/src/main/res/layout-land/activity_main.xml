@@ -6,32 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/waterflow"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:columnCount="2"
+        >
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/etUserInput"
+            android:layout_width="395dp"
+            android:layout_height="match_parent"
+            android:layout_row="0"
+            android:layout_column="0"
             android:layout_marginTop="10dp"
+            android:autofillHints="0"
             android:gravity="end|bottom"
-            android:lines="7"
             android:inputType="textMultiLine"
-            android:text="@string/keyZero"
-            android:textSize="@dimen/vertFontSize"/>
+            android:lines="7"
+            android:text="0"
+            android:textSize="@dimen/horResultFontSize" />
 
         <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_column="1"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:columnCount="4">
 
             <Button
@@ -40,52 +42,52 @@
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="clear"
                 android:text="@string/keyClear"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnBackSpace"
                 android:layout_marginRight="@dimen/layout_marginRight"
                 android:backgroundTint="@color/buttonBackground"
-                android:drawableLeft="@drawable/backspace"
+                android:drawableLeft="@drawable/m_backspace"
                 android:tag="back"
                 android:text="@string/keyBackSpace"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnPercent"
                 android:layout_marginRight="@dimen/layout_marginRight"
                 android:backgroundTint="@color/buttonBackground"
-                android:text="@string/keyPercent"
                 android:tag="perc"
-                android:textSize="@dimen/vertFontSize" />
+                android:text="@string/keyPercent"
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnDiv"
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="div"
                 android:text="@string/keyDiv"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumSeven"
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="7"
                 android:text="@string/keySeven"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumEight"
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="8"
                 android:text="@string/keyEight"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumNine"
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="9"
                 android:text="@string/keyNine"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
 
             <Button
@@ -93,92 +95,93 @@
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="multi"
                 android:text="@string/keyMulti"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumFour"
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="4"
                 android:text="@string/keyFour"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumFive"
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="5"
                 android:text="@string/keyFive"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumSix"
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="6"
                 android:text="@string/keySix"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnDec"
                 android:backgroundTint="@color/buttonBackground"
-                android:text="@string/keyDec"
                 android:tag="dec"
-                android:textSize="@dimen/vertFontSize" />
+                android:text="@string/keyDec"
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumOne"
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="1"
                 android:text="@string/keyOne"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumTwo"
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="2"
                 android:text="@string/keyTwo"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumThree"
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="3"
                 android:text="@string/keyThree"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumInc"
                 android:backgroundTint="@color/buttonBackground"
-                android:text="@string/keyInc"
                 android:tag="inc"
-                android:textSize="@dimen/vertFontSize" />
+                android:text="@string/keyInc"
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumCopy"
                 android:backgroundTint="@color/buttonBackground"
-                android:drawableLeft="@drawable/copy"
-                android:text="@string/keyCopy"
+                android:drawableLeft="@drawable/m_copy"
                 android:tag="copy"
-                android:textSize="@dimen/vertFontSize" />
+                android:text="@string/keyCopy"
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumZerro"
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="0"
                 android:text="@string/keyZero"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnLim"
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="lim"
                 android:text="@string/keyLim"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnEq"
-                android:tag="eq"
                 android:backgroundTint="@color/buttonBackground"
+                android:tag="eq"
                 android:text="@string/keyEq"
-                android:textSize="@dimen/vertFontSize" />
+                android:textSize="@dimen/horFontSize" />
         </GridLayout>
-    </LinearLayout>
+
+    </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,7 @@
 package com.yazvaa.calcforandroid;
 
 public enum Actions {
-    NONE,
+    EQUALLY,
     INC,
     DEC,
     DIV,

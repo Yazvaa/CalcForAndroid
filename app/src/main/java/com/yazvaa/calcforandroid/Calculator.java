@@ -18,8 +18,12 @@ public class Calculator implements Serializable {
         this.oldCalcul = oldCalcul;
     }
 
+    public float percentValue(float currentValue){
+        return this.values.get(this.values.size()-1) * currentValue/100;
+    }
+
     public void resumeCalc() {
-        setAction(Actions.NONE);
+        setAction(Actions.EQUALLY);
         float prevValue = 0;
         float nextValue = 0;
         float resume = 0;
@@ -48,7 +52,7 @@ public class Calculator implements Serializable {
                     // не успел
                     break;
                 }
-                case NONE:
+                case EQUALLY:
                     break;
             }
             prevValue = resume;
@@ -78,8 +82,15 @@ public class Calculator implements Serializable {
             if (action != Actions.PERCENT) {
                 this.values.add(newValue);
                 this.operands.add(action);
-            } else
-                this.values.add(newValue / 100);
+            } else {
+                if (this.operands.size()==0) {
+                    this.values.add(newValue / 100);
+                }
+                else
+                {
+                   this.values.add(percentValue(newValue));
+                }
+            }
         } catch (Exception e) {
             return;
         }
