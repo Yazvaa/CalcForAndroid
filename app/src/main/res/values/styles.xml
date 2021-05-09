@@ -18,16 +18,9 @@
     <style name="grid_keyboard">
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_column">1</item>
-        <item name="android:layout_marginRight">@dimen/keyboardMargin</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:layout_marginTop">@dimen/keyboardMargin</item>
+        <item name="android:layout_margin">@dimen/keyboardMargin</item>
         <item name="android:columnCount">4</item>
-    </style>
-
-    <style name="key_calc">
-        <item name="android:layout_marginRight">@dimen/buttonMarginRightHorizont</item>
-        <item name="android:backgroundTint">@color/buttonBackground</item>
-        <item name="android:textSize">@dimen/horFontSize</item>
     </style>
 
     <style name="CalcScreenPort">
@@ -47,5 +40,12 @@
         <item name="android:textColor">@color/buttonForeground</item>
         <item name="android:stateListAnimator">@null</item>
         <item name="android:textSize">@dimen/vertKeyFontSize</item>
+    </style>
+
+    <style name="keyStyleHorizont" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/buttonBackground</item>
+        <item name="android:textColor">@color/buttonForeground</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textSize">@dimen/horFontSize</item>
     </style>
 </resources>
