@@ -14,16 +14,8 @@
 
     <TextView
         android:id="@+id/etUserInput"
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/port_layout_height"
-        android:layout_margin="@dimen/marginCalcScreen"
-        android:layout_weight="1"
-        android:gravity="end|bottom"
-        android:inputType="textMultiLine"
-        android:lines="7"
-        android:scrollbars="vertical"
-        android:text="@string/keyZero"
-        android:textSize="@dimen/textSizeCalcScreen" />
+        style="@style/CalcScreenPort"
+        android:text="@string/keyZero" />
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -68,21 +60,21 @@
         <Button
             android:id="@+id/btnNumSeven"
             android:backgroundTint="@color/buttonBackground"
-            android:tag="num"
+            android:tag="7"
             android:text="@string/keySeven"
             android:textSize="@dimen/vertFontSize" />
 
         <Button
             android:id="@+id/btnNumEight"
             android:backgroundTint="@color/buttonBackground"
-            android:tag="num"
+            android:tag="8"
             android:text="@string/keyEight"
             android:textSize="@dimen/vertFontSize" />
 
         <Button
             android:id="@+id/btnNumNine"
             android:backgroundTint="@color/buttonBackground"
-            android:tag="num"
+            android:tag="9"
             android:text="@string/keyNine"
             android:textSize="@dimen/vertFontSize" />
 
@@ -97,21 +89,21 @@
         <Button
             android:id="@+id/btnNumFour"
             android:backgroundTint="@color/buttonBackground"
-            android:tag="num"
+            android:tag="4"
             android:text="@string/keyFour"
             android:textSize="@dimen/vertFontSize" />
 
         <Button
             android:id="@+id/btnNumFive"
             android:backgroundTint="@color/buttonBackground"
-            android:tag="num"
+            android:tag="5"
             android:text="@string/keyFive"
             android:textSize="@dimen/vertFontSize" />
 
         <Button
             android:id="@+id/btnNumSix"
             android:backgroundTint="@color/buttonBackground"
-            android:tag="num"
+            android:tag="6"
             android:text="@string/keySix"
             android:textSize="@dimen/vertFontSize" />
 
@@ -125,21 +117,21 @@
         <Button
             android:id="@+id/btnNumOne"
             android:backgroundTint="@color/buttonBackground"
-            android:tag="num"
+            android:tag="1"
             android:text="@string/keyOne"
             android:textSize="@dimen/vertFontSize" />
 
         <Button
             android:id="@+id/btnNumTwo"
             android:backgroundTint="@color/buttonBackground"
-            android:tag="num"
+            android:tag="2"
             android:text="@string/keyTwo"
             android:textSize="@dimen/vertFontSize" />
 
         <Button
             android:id="@+id/btnNumThree"
             android:backgroundTint="@color/buttonBackground"
-            android:tag="num"
+            android:tag="3"
             android:text="@string/keyThree"
             android:textSize="@dimen/vertFontSize" />
 
@@ -161,7 +153,7 @@
         <Button
             android:id="@+id/btnNumZerro"
             android:backgroundTint="@color/buttonBackground"
-            android:tag="num"
+            android:tag="0"
             android:text="@string/keyZero"
             android:textSize="@dimen/vertFontSize" />
 
@@ -172,11 +164,13 @@
             android:text="@string/keyLim"
             android:textSize="@dimen/vertFontSize" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnEq"
+            style="@style/Widget.MaterialComponents.Button"
             android:backgroundTint="@color/buttonBackground"
             android:tag="eq"
             android:text="@string/keyEq"
-            android:textSize="@dimen/vertFontSize" />
+            android:textSize="@dimen/vertFontSize"
+            app:cornerRadius="12dp" />
     </GridLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>

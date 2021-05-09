@@ -15,44 +15,23 @@
 
         <TextView
             android:id="@+id/etUserInput"
-            android:layout_height="match_parent"
-            android:layout_width="0dp"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill_horizontal"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:layout_marginTop="@dimen/marginCalcScreen"
-            android:autofillHints="0"
-            android:gravity="end|bottom"
-            android:inputType="textMultiLine"
-            android:lines="7"
             android:text="@string/keyZero"
-            android:textSize="@dimen/textSizeCalcScreen" />
+            style="@style/calc_screen" />
 
-        <GridLayout
-            android:layout_height="match_parent"
-            android:layout_column="1"
-            android:layout_marginRight="@dimen/keyboardVerticalMargin"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/keyboardVerticalMargin"
-            android:columnCount="4">
+        <GridLayout style="@style/grid_keyboard">
 
             <Button
                 android:id="@+id/btnClear"
-                android:layout_marginRight="@dimen/buttonMarginHorizont"
-                android:backgroundTint="@color/buttonBackground"
                 android:tag="clear"
                 android:text="@string/keyClear"
-                android:textSize="@dimen/horFontSize" />
+                style="@style/key_calc" />
 
             <Button
                 android:id="@+id/btnBackSpace"
-                android:layout_marginRight="@dimen/buttonMarginHorizont"
-                android:backgroundTint="@color/buttonBackground"
-                android:drawableLeft="@drawable/m_backspace"
+                android:drawableBottom="@drawable/m_backspace"
                 android:tag="back"
-                android:text="@string/keyBackSpace"
-                android:textSize="@dimen/horFontSize" />
+                style="@style/key_calc" />
+                android:text="@string/keyBackSpace"/>
 
             <Button
                 android:id="@+id/btnPercent"
@@ -72,21 +51,21 @@
             <Button
                 android:id="@+id/btnNumSeven"
                 android:backgroundTint="@color/buttonBackground"
-                android:tag="num"
+                android:tag="7"
                 android:text="@string/keySeven"
                 android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumEight"
                 android:backgroundTint="@color/buttonBackground"
-                android:tag="num"
+                android:tag="8"
                 android:text="@string/keyEight"
                 android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumNine"
                 android:backgroundTint="@color/buttonBackground"
-                android:tag="num"
+                android:tag="9"
                 android:text="@string/keyNine"
                 android:textSize="@dimen/horFontSize" />
 
@@ -101,21 +80,21 @@
             <Button
                 android:id="@+id/btnNumFour"
                 android:backgroundTint="@color/buttonBackground"
-                android:tag="num"
+                android:tag="4"
                 android:text="@string/keyFour"
                 android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumFive"
                 android:backgroundTint="@color/buttonBackground"
-                android:tag="num"
+                android:tag="5"
                 android:text="@string/keyFive"
                 android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumSix"
                 android:backgroundTint="@color/buttonBackground"
-                android:tag="num"
+                android:tag="6"
                 android:text="@string/keySix"
                 android:textSize="@dimen/horFontSize" />
 
@@ -129,21 +108,21 @@
             <Button
                 android:id="@+id/btnNumOne"
                 android:backgroundTint="@color/buttonBackground"
-                android:tag="num"
+                android:tag="1"
                 android:text="@string/keyOne"
                 android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumTwo"
                 android:backgroundTint="@color/buttonBackground"
-                android:tag="num"
+                android:tag="2"
                 android:text="@string/keyTwo"
                 android:textSize="@dimen/horFontSize" />
 
             <Button
                 android:id="@+id/btnNumThree"
                 android:backgroundTint="@color/buttonBackground"
-                android:tag="num"
+                android:tag="3"
                 android:text="@string/keyThree"
                 android:textSize="@dimen/horFontSize" />
 
@@ -165,7 +144,7 @@
             <Button
                 android:id="@+id/btnNumZerro"
                 android:backgroundTint="@color/buttonBackground"
-                android:tag="num"
+                android:tag="0"
                 android:text="@string/keyZero"
                 android:textSize="@dimen/horFontSize" />
 

@@ -8,14 +8,14 @@ public class Calculator implements Serializable {
     private int lastOperandPos = 0;
     private ArrayList<Float> values = new ArrayList<Float>();
     private ArrayList<Actions> operands = new ArrayList<Actions>();
-    private String oldCalcul = "";
+    private String oldCalculate = "";
 
     public String getOldCalcul() {
-        return oldCalcul;
+        return oldCalculate;
     }
 
-    public void setOldCalcul(String oldCalcul) {
-        this.oldCalcul = oldCalcul;
+    public void setOldCalcul(String oldCalculate) {
+        this.oldCalculate = oldCalculate;
     }
 
     public float percentValue(float currentValue) {
@@ -63,7 +63,7 @@ public class Calculator implements Serializable {
             this.currentString += "=" + prevValue;
         else
             this.currentString += "=" + String.valueOf(prevValue).substring(0, String.valueOf(prevValue).indexOf('.'));
-        this.oldCalcul += this.currentString + "\n";
+        this.oldCalculate += this.currentString + "\n";
         this.currentString = "0";
         this.values.clear();
         this.operands.clear();
@@ -145,7 +145,7 @@ public class Calculator implements Serializable {
         this.currentString = "0";
         this.operands.clear();
         this.values.clear();
-        this.oldCalcul = "";
+        this.oldCalculate = "";
     }
 
 }
