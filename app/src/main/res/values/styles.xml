@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="calc_screen">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_gravity">fill_horizontal</item>
+        <item name="android:layout_row">0</item>
+        <item name="android:layout_column">0</item>
+        <item name="android:layout_marginTop">@dimen/marginCalcScreen</item>
+        <item name="android:autofillHints">0</item>
+        <item name="android:gravity">end|bottom</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:lines">7</item>
+        <item name="android:textSize">@dimen/textSizeCalcScreen</item>
+    </style>
+
+    <style name="grid_keyboard">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_column">1</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_margin">@dimen/keyboardMargin</item>
+        <item name="android:columnCount">4</item>
+    </style>
+
+    <style name="CalcScreenPort">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/port_layout_height</item>
+        <item name="android:layout_margin">@dimen/marginCalcScreen</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">end|bottom</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:lines">7</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:textSize">@dimen/textSizeCalcScreen</item>
+    </style>
+
+    <style name="ButtonAll_Style" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/buttonBackground</item>
+        <item name="android:textColor">@color/buttonForeground</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textSize">@dimen/vertKeyFontSize</item>
+    </style>
+
+    <style name="keyStyleHorizont" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/buttonBackground</item>
+        <item name="android:textColor">@color/buttonForeground</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textSize">@dimen/horFontSize</item>
+    </style>
+</resources>

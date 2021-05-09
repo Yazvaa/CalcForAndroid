@@ -1,9 +1,9 @@
 package com.yazvaa.calcforandroid;
 
 public enum TypeKey {
-    Operand,
-    Num,
-    Eq,
-    Copy,
-    Managed
+    OPERAND,
+    NUM,
+    EQ,
+    COPY,
+    MANAGED
 }

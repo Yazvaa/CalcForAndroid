@@ -6,27 +6,29 @@ import java.util.ArrayList;
 public class Calculator implements Serializable {
     private String currentString = "0";
     private int lastOperandPos = 0;
-    private ArrayList<Float> values = new ArrayList<Float>();
+    private ArrayList<Double> values = new ArrayList<Double>();
     private ArrayList<Actions> operands = new ArrayList<Actions>();
-    private String oldCalcul = "";
 
-    public String getOldCalcul() {
-        return oldCalcul;
+    public String getOldCalculate() {
+        return oldCalculate;
     }
 
-    public void setOldCalcul(String oldCalcul) {
-        this.oldCalcul = oldCalcul;
+    public void setOldCalculate(String oldCalculate) {
+        this.oldCalculate = oldCalculate;
     }
 
-    public float percentValue(float currentValue){
-        return this.values.get(this.values.size()-1) * currentValue/100;
+    private String oldCalculate = "";
+
+
+    public double percentValue(double currentValue) {
+        return this.values.get(this.values.size() - 1) * currentValue / 100;
     }
 
     public void resumeCalc() {
         setAction(Actions.EQUALLY);
-        float prevValue = 0;
-        float nextValue = 0;
-        float resume = 0;
+        double prevValue = 0;
+        double nextValue = 0;
+        double resume = 0;
         int step = 0;
         prevValue = this.values.get(step);
         while (step + 1 < this.values.size()) {
@@ -48,47 +50,43 @@ public class Calculator implements Serializable {
                     resume = prevValue - nextValue;
                     break;
                 }
-                case PERCENT: {
-                    // не успел
-                    break;
-                }
                 case EQUALLY:
                     break;
             }
             prevValue = resume;
             step++;
         }
-        float d = prevValue % 1;
-        if (d > 0)
+        double d = prevValue % 1;
+        if (d > 0) {
             this.currentString += "=" + prevValue;
-        else
-            this.currentString += "=" + String.valueOf(prevValue).substring(0, String.valueOf(prevValue).indexOf('.'));
-        this.oldCalcul += this.currentString + "\n";
+        } else {
+            this.currentString += "=" + (int) prevValue;
+        }
+        this.oldCalculate += this.currentString + "\n";
         this.currentString = "0";
         this.values.clear();
         this.operands.clear();
     }
 
     public void setAction(Actions action) {
-        float newValue = 0;
+        double newValue = 0;
         String stringValue = "";
         try {
             if (this.operands.size() != 0) {
-                stringValue = this.currentString.substring(this.lastOperandPos, this.currentString.length());
-            } else
+                stringValue = getCurrentStringValue(this.lastOperandPos, this.currentString.length());
+            } else {
                 stringValue = this.currentString;
+            }
             this.lastOperandPos = this.currentString.length() + 1;
             newValue = Float.valueOf(stringValue);
             if (action != Actions.PERCENT) {
                 this.values.add(newValue);
                 this.operands.add(action);
             } else {
-                if (this.operands.size()==0) {
+                if (this.operands.size() == 0) {
                     this.values.add(newValue / 100);
-                }
-                else
-                {
-                   this.values.add(percentValue(newValue));
+                } else {
+                    this.values.add(percentValue(newValue));
                 }
             }
         } catch (Exception e) {
@@ -97,21 +95,18 @@ public class Calculator implements Serializable {
     }
 
     public void setLimiter() {
-        float newValue = 0;
+        double newValue = 0;
         String stringValue = "";
-        try {
-            if (this.operands.size() != 0) {
-                stringValue = this.currentString.substring(this.lastOperandPos, this.currentString.length());
-            } else
-                stringValue = this.currentString;
-            if (stringValue.length() == 0) {
-                this.currentString += "0.";
-                return;
-            }
-            if (stringValue.indexOf('.') == -1) {
-                this.currentString += '.';
-            }
-        } catch (Exception e) {
+        if (this.operands.size() != 0) {
+            stringValue = getCurrentStringValue(this.lastOperandPos, this.currentString.length());
+        } else
+            stringValue = this.currentString;
+        if (stringValue.length() == 0) {
+            this.currentString += "0.";
+            return;
+        }
+        if (stringValue.indexOf('.') == -1) {
+            this.currentString += '.';
         }
     }
 
@@ -130,11 +125,14 @@ public class Calculator implements Serializable {
 
     public void backspace() {
         if (this.currentString.length() > 1)
-            this.currentString = this.currentString.substring(0, this.currentString.length() - 1);
+            this.currentString = getCurrentStringValue(0, this.currentString.length() - 1);
         else
             this.currentString = "0";
     }
 
+    private String getCurrentStringValue(int start, int end){
+        return this.currentString.substring(start, end);
+    }
     public void appendValueString(String value) {
         if (this.currentString != "0")
             this.currentString += value;
@@ -147,7 +145,7 @@ public class Calculator implements Serializable {
         this.currentString = "0";
         this.operands.clear();
         this.values.clear();
-        this.oldCalcul = "";
+        this.oldCalculate = "";
     }
 
 }

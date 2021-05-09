@@ -1,184 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/waterflow"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="2"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+
+    <TextView
+        android:id="@+id/etUserInput"
+        style="@style/CalcScreenPort"
+        android:text="@string/keyZero" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/waterflow"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:layout_margin="@dimen/keyboardMargin"
+        android:columnCount="4"
+        android:rowCount="5">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/etUserInput"
-            android:layout_marginTop="10dp"
-            android:gravity="end|bottom"
-            android:lines="7"
-            android:inputType="textMultiLine"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            style="@style/ButtonAll_Style"
+            android:layout_marginRight="@dimen/buttonMarginRightHorizont"
+            android:tag="clear"
+            android:text="@string/keyClear"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBackSpace"
+            android:layout_marginRight="@dimen/buttonMarginRightHorizont"
+             style="@style/ButtonAll_Style"
+            android:drawableLeft="@drawable/backspace"
+            android:tag="back"
+            android:text="@string/keyBackSpace"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPercent"
+            android:layout_marginRight="@dimen/buttonMarginRightHorizont"
+             style="@style/ButtonAll_Style"
+            android:tag="perc"
+            android:text="@string/keyPercent"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDiv"
+             style="@style/ButtonAll_Style"
+            android:tag="div"
+            android:text="@string/keyDiv"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNumSeven"
+             style="@style/ButtonAll_Style"
+            android:tag="7"
+            android:text="@string/keySeven"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNumEight"
+             style="@style/ButtonAll_Style"
+            android:tag="8"
+            android:text="@string/keyEight"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNumNine"
+             style="@style/ButtonAll_Style"
+            android:tag="9"
+            android:text="@string/keyNine"
+            app:cornerRadius="12dp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMulti"
+             style="@style/ButtonAll_Style"
+            android:tag="multi"
+            android:text="@string/keyMulti"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNumFour"
+             style="@style/ButtonAll_Style"
+            android:tag="4"
+            android:text="@string/keyFour"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNumFive"
+             style="@style/ButtonAll_Style"
+            android:tag="5"
+            android:text="@string/keyFive"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNumSix"
+             style="@style/ButtonAll_Style"
+            android:tag="6"
+            android:text="@string/keySix"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDec"
+             style="@style/ButtonAll_Style"
+            android:tag="dec"
+            android:text="@string/keyDec"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNumOne"
+             style="@style/ButtonAll_Style"
+            android:tag="1"
+            android:text="@string/keyOne"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNumTwo"
+             style="@style/ButtonAll_Style"
+            android:tag="2"
+            android:text="@string/keyTwo"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNumThree"
+             style="@style/ButtonAll_Style"
+            android:tag="3"
+            android:text="@string/keyThree"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNumInc"
+             style="@style/ButtonAll_Style"
+            android:tag="inc"
+            android:text="@string/keyInc"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNumCopy"
+            android:drawableLeft="@drawable/copy"
+            android:tag="copy"
+            style="@style/ButtonAll_Style"
+            android:text="@string/keyCopy"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNumZerro"
+            android:tag="0"
             android:text="@string/keyZero"
-            android:textSize="@dimen/vertFontSize"/>
+            style="@style/ButtonAll_Style"
+            app:cornerRadius="12dp"  />
 
-        <GridLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:columnCount="4">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLim"
+            android:tag="lim"
+            android:text="@string/keyLim"
+            style="@style/ButtonAll_Style"
+            app:cornerRadius="12dp"  />
 
-            <Button
-                android:id="@+id/btnClear"
-                android:layout_marginRight="@dimen/layout_marginRight"
-                android:backgroundTint="@color/buttonBackground"
-                android:tag="clear"
-                android:text="@string/keyClear"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnBackSpace"
-                android:layout_marginRight="@dimen/layout_marginRight"
-                android:backgroundTint="@color/buttonBackground"
-                android:drawableLeft="@drawable/backspace"
-                android:tag="back"
-                android:text="@string/keyBackSpace"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnPercent"
-                android:layout_marginRight="@dimen/layout_marginRight"
-                android:backgroundTint="@color/buttonBackground"
-                android:text="@string/keyPercent"
-                android:tag="perc"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnDiv"
-                android:backgroundTint="@color/buttonBackground"
-                android:tag="div"
-                android:text="@string/keyDiv"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnNumSeven"
-                android:backgroundTint="@color/buttonBackground"
-                android:tag="7"
-                android:text="@string/keySeven"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnNumEight"
-                android:backgroundTint="@color/buttonBackground"
-                android:tag="8"
-                android:text="@string/keyEight"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnNumNine"
-                android:backgroundTint="@color/buttonBackground"
-                android:tag="9"
-                android:text="@string/keyNine"
-                android:textSize="@dimen/vertFontSize" />
-
-
-            <Button
-                android:id="@+id/btnMulti"
-                android:backgroundTint="@color/buttonBackground"
-                android:tag="multi"
-                android:text="@string/keyMulti"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnNumFour"
-                android:backgroundTint="@color/buttonBackground"
-                android:tag="4"
-                android:text="@string/keyFour"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnNumFive"
-                android:backgroundTint="@color/buttonBackground"
-                android:tag="5"
-                android:text="@string/keyFive"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnNumSix"
-                android:backgroundTint="@color/buttonBackground"
-                android:tag="6"
-                android:text="@string/keySix"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnDec"
-                android:backgroundTint="@color/buttonBackground"
-                android:text="@string/keyDec"
-                android:tag="dec"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnNumOne"
-                android:backgroundTint="@color/buttonBackground"
-                android:tag="1"
-                android:text="@string/keyOne"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnNumTwo"
-                android:backgroundTint="@color/buttonBackground"
-                android:tag="2"
-                android:text="@string/keyTwo"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnNumThree"
-                android:backgroundTint="@color/buttonBackground"
-                android:tag="3"
-                android:text="@string/keyThree"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnNumInc"
-                android:backgroundTint="@color/buttonBackground"
-                android:text="@string/keyInc"
-                android:tag="inc"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnNumCopy"
-                android:backgroundTint="@color/buttonBackground"
-                android:drawableLeft="@drawable/copy"
-                android:text="@string/keyCopy"
-                android:tag="copy"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnNumZerro"
-                android:backgroundTint="@color/buttonBackground"
-                android:tag="0"
-                android:text="@string/keyZero"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnLim"
-                android:backgroundTint="@color/buttonBackground"
-                android:tag="lim"
-                android:text="@string/keyLim"
-                android:textSize="@dimen/vertFontSize" />
-
-            <Button
-                android:id="@+id/btnEq"
-                android:tag="eq"
-                android:backgroundTint="@color/buttonBackground"
-                android:text="@string/keyEq"
-                android:textSize="@dimen/vertFontSize" />
-        </GridLayout>
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEq"
+            android:tag="eq"
+            android:text="@string/keyEq"
+            style="@style/ButtonAll_Style"
+            app:cornerRadius="12dp" />
+    </GridLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
