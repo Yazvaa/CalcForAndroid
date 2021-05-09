@@ -2,13 +2,14 @@
 <resources>
     <dimen name="horFontSize">28dp</dimen>
     <dimen name="vertFontSize">42dp</dimen>
+    <dimen name="vertKeyFontSize">42dp</dimen>
     <dimen name="horResultFontSize">42dp</dimen>
-    <dimen name="layout_marginRight">5dp</dimen>
+    <dimen name="keyLayout_marginRight">5dp</dimen>
     <dimen name="port_weightSum">2</dimen>
     <dimen name="port_layout_height">0dp</dimen>
     <dimen name="textSizeCalcScreen">42dp</dimen>
-    <dimen name="keyboardVerticalMargin">10dp</dimen>
+    <dimen name="keyboardMargin">5dp</dimen>
     <dimen name="marginCalcScreen">10dp</dimen>
-    <dimen name="buttonMarginHorizont">12dp</dimen>
+    <dimen name="buttonMarginRightHorizont">8dp</dimen>
     <dimen name="textLineCalcScreen">7</dimen>
 </resources>

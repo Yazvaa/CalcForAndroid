@@ -35,7 +35,7 @@
 
             <Button
                 android:id="@+id/btnPercent"
-                android:layout_marginRight="@dimen/buttonMarginHorizont"
+                android:layout_marginRight="@dimen/buttonMarginRightHorizont"
                 android:backgroundTint="@color/buttonBackground"
                 android:tag="perc"
                 android:text="@string/keyPercent"

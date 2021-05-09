@@ -7,19 +7,24 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "CALC_FOR_ANDROID";
-    TypeKey lastKey;
-    TextView ResultOutPut;
-    Calculator calculator = new Calculator();
+    private TypeKey lastKey;
+    private TextView resultOutPutTextView;
+    private Calculator calculator = new Calculator();
     private final static String KEY_CALC = "calculator";
-
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        resultOutPutTextView = (TextView) findViewById(R.id.etUserInput);
+        initButtons();
+    }
     @Override
     public void onSaveInstanceState(@NonNull Bundle instanceState) {
         super.onSaveInstanceState(instanceState);
@@ -32,14 +37,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         calculator = (Calculator) instanceState.getSerializable(KEY_CALC);
         print();
 
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ResultOutPut = (TextView) findViewById(R.id.etUserInput);
-        initButtons();
     }
 
     private void initButtons() {
@@ -80,49 +77,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             switch (button.getTag().toString()) {
                 case "back": {
                     calculator.backspace();
-                    lastKey = TypeKey.Managed;
+                    lastKey = TypeKey.MANAGED;
                     break;
                 }
                 case "clear": {
                     calculator.reset();
-                    lastKey = TypeKey.Managed;
+                    lastKey = TypeKey.MANAGED;
                     break;
                 }
                 case "div": {
-                    if (lastKey != TypeKey.Operand) {
-                        lastKey = TypeKey.Operand;
+                    if (lastKey != TypeKey.OPERAND) {
+                        lastKey = TypeKey.OPERAND;
                         calculator.setAction(Actions.DIV);
                         calculator.setCurrentString(calculator.getCurrentString() + button.getText().toString());
                     }
                     break;
                 }
                 case "multi": {
-                    if (lastKey != TypeKey.Operand) {
-                        lastKey = TypeKey.Operand;
+                    if (lastKey != TypeKey.OPERAND) {
+                        lastKey = TypeKey.OPERAND;
                         calculator.setAction(Actions.MULTI);
                         calculator.setCurrentString(calculator.getCurrentString() + button.getText().toString());
                     }
                     break;
                 }
                 case "inc": {
-                    if (lastKey != TypeKey.Operand) {
-                        lastKey = TypeKey.Operand;
+                    if (lastKey != TypeKey.OPERAND) {
+                        lastKey = TypeKey.OPERAND;
                         calculator.setAction(Actions.INC);
                         calculator.setCurrentString(calculator.getCurrentString() + button.getText().toString());
                     }
                     break;
                 }
                 case "dec": {
-                    if (lastKey != TypeKey.Operand) {
-                        lastKey = TypeKey.Operand;
+                    if (lastKey != TypeKey.OPERAND) {
+                        lastKey = TypeKey.OPERAND;
                         calculator.setAction(Actions.DEC);
                         calculator.setCurrentString(calculator.getCurrentString() + button.getText().toString());
                     }
                     break;
                 }
                 case "perc": {
-                    if (lastKey != TypeKey.Operand) {
-                        lastKey = TypeKey.Operand;
+                    if (lastKey != TypeKey.OPERAND) {
+                        lastKey = TypeKey.OPERAND;
                         calculator.setAction(Actions.PERCENT);
                         calculator.setCurrentString(calculator.getCurrentString() + button.getText().toString());
                     }
@@ -144,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 default: {
                     calculator.appendValueString(button.getTag().toString());
-                    lastKey = TypeKey.Num;
+                    lastKey = TypeKey.NUM;
                     break;
                 }
             }
@@ -153,6 +150,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void print() {
-        ResultOutPut.setText(calculator.getOldCalcul() + calculator.getCurrentString());
+        resultOutPutTextView.setText(calculator.getOldCalculate() + calculator.getCurrentString());
     }
 }
