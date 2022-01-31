@@ -9,4 +9,6 @@
     <color name="transparent">#00000000</color>
     <color name="buttonBackground">#0F6200EE</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="backgroundGradientEnd">#08568B</color>
+    <color name="backgroundGradientStart">#00BFA9</color>
 </resources>

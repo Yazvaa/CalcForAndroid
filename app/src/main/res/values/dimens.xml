@@ -4,4 +4,6 @@
     <dimen name="vertFontSize">42dp</dimen>
     <dimen name="horResultFontSize">42dp</dimen>
     <dimen name="layout_marginRight">5dp</dimen>
+    <dimen name="base_margin_top">10dp</dimen>
+    <dimen name="base_margin">10dp</dimen>
 </resources>
