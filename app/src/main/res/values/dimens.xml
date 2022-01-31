@@ -12,4 +12,5 @@
     <dimen name="marginCalcScreen">10dp</dimen>
     <dimen name="buttonMarginRightHorizont">8dp</dimen>
     <dimen name="textLineCalcScreen">7</dimen>
+    <dimen name="corner_radius_button">10dp</dimen>
 </resources>

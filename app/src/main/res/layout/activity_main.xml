@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    android:background="@drawable/waterflow"
+    android:background="@drawable/shape_gradient"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:weightSum="2"
     tools:context=".MainActivity">
 
 
     <TextView
         android:id="@+id/etUserInput"
         style="@style/CalcScreenPort"
-        android:text="@string/keyZero" />
+        android:text="@string/keyZero"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/grdKeyboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <GridLayout
+        android:id="@+id/grdKeyboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="@dimen/keyboardMargin"
         android:columnCount="4"
-        android:rowCount="5">
+        android:rowCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnClear"
@@ -35,8 +43,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBackSpace"
+            style="@style/ButtonAll_Style"
             android:layout_marginRight="@dimen/buttonMarginRightHorizont"
-             style="@style/ButtonAll_Style"
             android:drawableLeft="@drawable/backspace"
             android:tag="back"
             android:text="@string/keyBackSpace"
@@ -44,36 +52,36 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnPercent"
+            style="@style/ButtonAll_Style"
             android:layout_marginRight="@dimen/buttonMarginRightHorizont"
-             style="@style/ButtonAll_Style"
             android:tag="perc"
             android:text="@string/keyPercent"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnDiv"
-             style="@style/ButtonAll_Style"
+            style="@style/ButtonAll_Style"
             android:tag="div"
             android:text="@string/keyDiv"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNumSeven"
-             style="@style/ButtonAll_Style"
+            style="@style/ButtonAll_Style"
             android:tag="7"
             android:text="@string/keySeven"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNumEight"
-             style="@style/ButtonAll_Style"
+            style="@style/ButtonAll_Style"
             android:tag="8"
             android:text="@string/keyEight"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNumNine"
-             style="@style/ButtonAll_Style"
+            style="@style/ButtonAll_Style"
             android:tag="9"
             android:text="@string/keyNine"
             app:cornerRadius="12dp" />
@@ -81,94 +89,94 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnMulti"
-             style="@style/ButtonAll_Style"
+            style="@style/ButtonAll_Style"
             android:tag="multi"
             android:text="@string/keyMulti"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNumFour"
-             style="@style/ButtonAll_Style"
+            style="@style/ButtonAll_Style"
             android:tag="4"
             android:text="@string/keyFour"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNumFive"
-             style="@style/ButtonAll_Style"
+            style="@style/ButtonAll_Style"
             android:tag="5"
             android:text="@string/keyFive"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNumSix"
-             style="@style/ButtonAll_Style"
+            style="@style/ButtonAll_Style"
             android:tag="6"
             android:text="@string/keySix"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnDec"
-             style="@style/ButtonAll_Style"
+            style="@style/ButtonAll_Style"
             android:tag="dec"
             android:text="@string/keyDec"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNumOne"
-             style="@style/ButtonAll_Style"
+            style="@style/ButtonAll_Style"
             android:tag="1"
             android:text="@string/keyOne"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNumTwo"
-             style="@style/ButtonAll_Style"
+            style="@style/ButtonAll_Style"
             android:tag="2"
             android:text="@string/keyTwo"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNumThree"
-             style="@style/ButtonAll_Style"
+            style="@style/ButtonAll_Style"
             android:tag="3"
             android:text="@string/keyThree"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNumInc"
-             style="@style/ButtonAll_Style"
+            style="@style/ButtonAll_Style"
             android:tag="inc"
             android:text="@string/keyInc"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNumCopy"
+            style="@style/ButtonAll_Style"
             android:drawableLeft="@drawable/copy"
             android:tag="copy"
-            style="@style/ButtonAll_Style"
             android:text="@string/keyCopy"
             app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNumZerro"
+            style="@style/ButtonAll_Style"
             android:tag="0"
             android:text="@string/keyZero"
-            style="@style/ButtonAll_Style"
-            app:cornerRadius="12dp"  />
+            app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLim"
+            style="@style/ButtonAll_Style"
             android:tag="lim"
             android:text="@string/keyLim"
-            style="@style/ButtonAll_Style"
-            app:cornerRadius="12dp"  />
+            app:cornerRadius="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnEq"
+            style="@style/ButtonAll_Style"
             android:tag="eq"
             android:text="@string/keyEq"
-            style="@style/ButtonAll_Style"
             app:cornerRadius="12dp" />
     </GridLayout>
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,4 +10,6 @@
     <color name="buttonBackground">#5FFFFFFF</color>
     <color name="buttonForeground">#5F000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="backgroundGradientEnd">#08568B</color>
+    <color name="backgroundGradientStart">#00BFA9</color>
 </resources>
