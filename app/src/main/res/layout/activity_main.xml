@@ -3,34 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/shape_gradient"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/waterflow"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:id="@+id/etUserInput"
             android:layout_marginTop="10dp"
             android:gravity="end|bottom"
-            android:lines="7"
             android:inputType="textMultiLine"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"
+            android:elevation="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/grdKeyboard"
+            android:layout_margin="@dimen/base_margin"
+            app:layout_constraintEnd_toEndOf="parent"
             android:text="@string/keyZero"
             android:textSize="@dimen/vertFontSize"/>
 
         <GridLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/base_margin"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
+            android:id="@+id/grdKeyboard"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="10dp"
             android:columnCount="4">
 
@@ -180,5 +184,4 @@
                 android:text="@string/keyEq"
                 android:textSize="@dimen/vertFontSize" />
         </GridLayout>
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
